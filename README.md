@@ -1,3 +1,5 @@
+This repo was created to reproduce the issue in https://github.com/ckeditor/ckeditor5/issues/1755.  
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
