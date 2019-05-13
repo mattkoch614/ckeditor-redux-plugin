@@ -10,8 +10,10 @@ import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 
+import CustomButton from "./ckeditor/plugins/CustomButton";
+
 const editorConfiguration = {
-  plugins: [ Essentials, Bold, Italic, Paragraph ],
+  plugins: [ Essentials, Bold, Italic, Paragraph, CustomButton],
   toolbar: [ 'bold', 'italic' ]
 };
 
@@ -23,7 +25,7 @@ class App extends Component {
         <CKEditor
           editor={ ClassicEditor }
           config={ editorConfiguration }
-          data="<p>Hello from CKEditor 5!</p>"
+          data='<p>Hello from CKEditor 5! <span class="custombutton">{search query}</span></p> '
           onInit={ editor => {
             // You can store the "editor" and use when it is needed.
             console.log( 'Editor is ready to use!', editor );
